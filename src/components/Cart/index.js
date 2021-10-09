@@ -16,7 +16,6 @@ class Cart extends Component {
         {value => {
           const {cartList} = value
           const isCartEmpty = cartList.length === 0
-          console.log(isCartEmpty, 1)
 
           return (
             <>

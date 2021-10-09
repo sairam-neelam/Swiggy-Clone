@@ -21,7 +21,7 @@ const Header = props => {
   const getColor = current => {
     const {history} = props
     if (history.location.pathname === current) {
-      console.log(history.location.pathname)
+      // console.log(history.location.pathname)
       return '#f7931e'
     }
     return '#334155'

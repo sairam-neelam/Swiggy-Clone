@@ -65,7 +65,7 @@ class FoodItemCard extends Component {
                     className="add-btn"
                     onClick={onClickAdd}
                   >
-                    ADD
+                    Add
                   </button>
                 ) : (
                   <div className="cart-btn-qty-cont">
