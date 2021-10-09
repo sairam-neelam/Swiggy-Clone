@@ -5,7 +5,6 @@ dependencies:
   chalk: 4.1.0
   js-cookie: 3.0.1
   react: 17.0.1
-  react-burger-menu: 2.9.2_react-dom@17.0.1+react@17.0.1
   react-dom: 17.0.1_react@17.0.1
   react-icons: 4.3.1_react@17.0.1
   react-loader-spinner: 4.0.0_react-dom@17.0.1+react@17.0.1
@@ -2749,13 +2748,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
-  /amdefine/1.0.1:
-    dev: false
-    engines:
-      node: '>=0.4.2'
-    optional: true
-    resolution:
-      integrity: sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
   /ansi-colors/3.2.4:
     dev: true
     engines:
@@ -2974,24 +2966,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
-  /ast-transform/0.0.0:
-    dependencies:
-      escodegen: 1.2.0
-      esprima: 1.0.4
-      through: 2.3.8
-    dev: false
-    resolution:
-      integrity: sha1-dJRAWIh9goPhidlUYAlHvJj+AGI=
   /ast-types-flow/0.0.7:
     dev: true
     resolution:
       integrity: sha1-9wtzXGvKGlycItmCw+Oef+ujva0=
-  /ast-types/0.7.8:
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha1-kC0uDWDQcb3NRtwRXhgJ7RHBOKk=
   /astral-regex/2.0.0:
     dev: true
     engines:
@@ -3410,12 +3388,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==
-  /browser-resolve/1.11.3:
-    dependencies:
-      resolve: 1.1.7
-    dev: false
-    resolution:
-      integrity: sha512-exDi1BYWB/6raKHmDTCicQfTkqwN5fioMFV4j8BsfMU4R2DK/QfZfK7kOVkmWCNANf0snkBzqGqAJBao9gZMdQ==
   /browserify-aes/1.2.0:
     dependencies:
       buffer-xor: 1.0.3
@@ -3444,14 +3416,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-BioO1xf3hFwz4kc6iBhI3ieDFompMhrMlnDFC4/0/vd5MokpuAc3R+LYbwTA9A5Yc9pq9UYPqffKpW2ObuwX5A==
-  /browserify-optional/1.0.1:
-    dependencies:
-      ast-transform: 0.0.0
-      ast-types: 0.7.8
-      browser-resolve: 1.11.3
-    dev: false
-    resolution:
-      integrity: sha1-HhNyLP3g2F8SFnbCpyztUzoBiGk=
   /browserify-rsa/4.1.0:
     dependencies:
       bn.js: 5.2.0
@@ -5045,19 +5009,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
-  /escodegen/1.2.0:
-    dependencies:
-      esprima: 1.0.4
-      estraverse: 1.5.1
-      esutils: 1.0.0
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    hasBin: true
-    optionalDependencies:
-      source-map: 0.1.43
-    resolution:
-      integrity: sha1-Cd55Z3kcyVi3+Jot220jRRrzJ+E=
   /escodegen/2.0.0:
     dependencies:
       esprima: 4.0.1
@@ -5422,13 +5373,6 @@ packages:
       node: ^10.12.0 || >=12.0.0
     resolution:
       integrity: sha512-v3JCNCE64umkFpmkFGqzVKsOT0tN1Zr+ueqLZfpV1Ob8e+CEgPWa+OxCoGH3tnhimMKIaBm4m/vaRpJ/krRz2g==
-  /esprima/1.0.4:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    hasBin: true
-    resolution:
-      integrity: sha1-n1V+CPw7TSbs6d00+Pv0drYlha0=
   /esprima/4.0.1:
     dev: true
     engines:
@@ -5452,12 +5396,6 @@ packages:
       node: '>=4.0'
     resolution:
       integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==
-  /estraverse/1.5.1:
-    dev: false
-    engines:
-      node: '>=0.4.0'
-    resolution:
-      integrity: sha1-hno+jlip+EYYr7bC3bzZFrfLr3E=
   /estraverse/4.3.0:
     dev: true
     engines:
@@ -5478,12 +5416,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==
-  /esutils/1.0.0:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-gVHTWOIMisx/t0XnRywAJf5JZXA=
   /esutils/2.0.3:
     dev: true
     engines:
@@ -5496,10 +5428,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
-  /eve/0.5.4:
-    dev: false
-    resolution:
-      integrity: sha1-Z9CAuXJSkdfjieNMJoYN2X8d66o=
   /eventemitter3/4.0.7:
     dev: true
     resolution:
@@ -10320,23 +10248,6 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-0sF4ny9v/B7s6aoehwze9vJNWcmCemAUYBVasscVr92+UYiEqDXOxfKjXN685mDaMRNF3WdhHQs76oTODMocFA==
-  /react-burger-menu/2.9.2_react-dom@17.0.1+react@17.0.1:
-    dependencies:
-      browserify-optional: 1.0.1
-      classnames: 2.3.1
-      eve: 0.5.4
-      prop-types: 15.7.2
-      react: 17.0.1
-      react-dom: 17.0.1_react@17.0.1
-      snapsvg-cjs: 0.0.6_eve@0.5.4
-    dev: false
-    engines:
-      node: '>=4.0.0'
-    peerDependencies:
-      react: '>=0.14.0 <17.0.0'
-      react-dom: '>=0.14.0 <17.0.0'
-    resolution:
-      integrity: sha512-NOVV0Svjydlo8b/Twd/BQZ7WYr6T5rdVtxTsS7iESFCdQekaK8DIZt78D+qFS4eUjy8q/VQ2H3SLy/xir/NN8Q==
   /react-dev-utils/11.0.4:
     dependencies:
       '@babel/code-frame': 7.10.4
@@ -10849,10 +10760,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-LGN/53yJOv0qZj/iGqkIAGjiBSo=
-  /resolve/1.1.7:
-    dev: false
-    resolution:
-      integrity: sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=
   /resolve/1.18.1:
     dependencies:
       is-core-module: 2.7.0
@@ -11384,21 +11291,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-FtyOnWN/wCHTVXOMwvSv26d+ko5vWlIDD6zoUJ7LW8vh+ZBC8QdljveRP+crNrtBwioEUWy/4dMtbBjA4ioNlg==
-  /snapsvg-cjs/0.0.6_eve@0.5.4:
-    dependencies:
-      eve: 0.5.4
-      snapsvg: 0.5.1
-    dev: false
-    peerDependencies:
-      eve: ~0.5.1
-    resolution:
-      integrity: sha1-Oy9WryVz09Nkw+1b+IhXRfTS3eE=
-  /snapsvg/0.5.1:
-    dependencies:
-      eve: 0.5.4
-    dev: false
-    resolution:
-      integrity: sha1-DK9Sx5GJopB0b8RGzF6GP2vd3+M=
   /sockjs-client/1.5.2:
     dependencies:
       debug: 3.2.7
@@ -11464,15 +11356,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
-  /source-map/0.1.43:
-    dependencies:
-      amdefine: 1.0.1
-    dev: false
-    engines:
-      node: '>=0.8.0'
-    optional: true
-    resolution:
-      integrity: sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=
   /source-map/0.5.7:
     dev: true
     engines:
@@ -12034,6 +11917,7 @@ packages:
     resolution:
       integrity: sha512-fcwX4mndzpLQKBS1DVYhGAcYaYt7vsHNIvQV+WXMvnow5cgjPphq5CaayLaGsjRdSCKZFNGt7/GYAuXaNOiYCA==
   /through/2.3.8:
+    dev: true
     resolution:
       integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
   /through2/2.0.5:
@@ -13107,7 +12991,6 @@ specifiers:
   npm-run-all: 4.1.5
   prettier: 2.2.1
   react: 17.0.1
-  react-burger-menu: ^2.9.2
   react-dom: 17.0.1
   react-icons: 4.3.1
   react-loader-spinner: 4.0.0

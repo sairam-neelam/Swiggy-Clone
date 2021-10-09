@@ -101,17 +101,17 @@ class App extends Component {
     localStorage.setItem('cartData', JSON.stringify(cartList))
 
     return (
-      <CartContext.Provider
-        value={{
-          cartList,
-          addCartItem: this.addCartItem,
-          removeCartItem: this.removeCartItem,
-          incrementCartItemQuantity: this.incrementCartItemQuantity,
-          decrementCartItemQuantity: this.decrementCartItemQuantity,
-          removeAllCartItems: this.removeAllCartItems,
-        }}
-      >
-        <BrowserRouter>
+      <BrowserRouter>
+        <CartContext.Provider
+          value={{
+            cartList,
+            addCartItem: this.addCartItem,
+            removeCartItem: this.removeCartItem,
+            incrementCartItemQuantity: this.incrementCartItemQuantity,
+            decrementCartItemQuantity: this.decrementCartItemQuantity,
+            removeAllCartItems: this.removeAllCartItems,
+          }}
+        >
           <Switch>
             <Route exact path="/login" component={Login} />
             <ProtectedRoute exact path="/" component={Home} />
@@ -121,11 +121,11 @@ class App extends Component {
               component={RestaurantDetails}
             />
             <ProtectedRoute exact path="/cart" component={Cart} />
-            <Route path="/not-found" component={NotFound} />
-            <Redirect to="not-found" />
+            <Route path="/bad-path" component={NotFound} />
+            <Redirect to="bad-path" />
           </Switch>
-        </BrowserRouter>
-      </CartContext.Provider>
+        </CartContext.Provider>
+      </BrowserRouter>
     )
   }
 }
