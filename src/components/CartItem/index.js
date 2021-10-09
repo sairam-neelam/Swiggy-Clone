@@ -29,18 +29,18 @@ const CartItem = props => (
             <h1 className="cart-item-mobile-name">{name}</h1>
             <div className="cart-qty-container">
               <button
-                className="cart-qty-btn"
+                className="decrement-quantity"
                 type="button"
                 onClick={decreaseQuantity}
                 testid="decrement-quantity"
               >
                 <BsDashSquare size={16} />
               </button>
-              <p testid="item-quantity" className="cart-qty">
+              <p testid="item-quantity" className="item-quantity">
                 {quantity}
               </p>
               <button
-                className="cart-qty-btn"
+                className="increment-quantity"
                 type="button"
                 onClick={increaseQuantity}
                 testid="increment-quantity"

@@ -1,48 +1,36 @@
+import {Component} from 'react'
+
 import Header from '../Header'
 import Footer from '../Footer'
 
 import CartContext from '../../context/CartContext'
 import EmptyCartView from '../EmptyCartView'
-import CartItem from '../CartItem'
-import CartTotal from '../CartTotal'
+import CartListView from '../CartListView'
 
 import './index.css'
 
-const Cart = () => (
-  <CartContext.Consumer>
-    {value => {
-      const {cartList} = value
-      const isCartEmpty = cartList.length === 0
+class Cart extends Component {
+  render() {
+    return (
+      <CartContext.Consumer>
+        {value => {
+          const {cartList} = value
+          const isCartEmpty = cartList.length === 0
+          console.log(isCartEmpty, 1)
 
-      return (
-        <>
-          <Header />
-          <div className="cart-container">
-            {isCartEmpty ? (
-              <EmptyCartView />
-            ) : (
-              <div className="cart-content-container">
-                <div className="cart-headers-cont">
-                  <p className="cart-header-items">Item</p>
-                  <div className="qty-price-cont">
-                    <p className="cart-header-qty">Quantity</p>
-                    <p className="cart-header-price">Price</p>
-                  </div>
-                </div>
-                <ul className="cart-list">
-                  {cartList.map(eachItem => (
-                    <CartItem key={eachItem.id} cartItem={eachItem} />
-                  ))}
-                </ul>
-                <CartTotal />
+          return (
+            <>
+              <Header />
+              <div className="cart-container">
+                {isCartEmpty ? <EmptyCartView /> : <CartListView />}
               </div>
-            )}
-          </div>
-          <Footer />
-        </>
-      )
-    }}
-  </CartContext.Consumer>
-)
+              <Footer />
+            </>
+          )
+        }}
+      </CartContext.Consumer>
+    )
+  }
+}
 
 export default Cart

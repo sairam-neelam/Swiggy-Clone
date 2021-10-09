@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom'
-import Header from '../Header'
 
 import CartContext from '../../context/CartContext'
 
@@ -10,13 +9,12 @@ const Payment = () => (
     {value => {
       const {removeAllCartItems} = value
 
-      const onPayingOrder = () => {
+      const clearCart = () => {
         removeAllCartItems()
       }
 
       return (
         <>
-          <Header />
           <div className="payment-container">
             <div className="payment-card">
               <img
@@ -30,11 +28,7 @@ const Payment = () => (
                 completed.
               </p>
               <Link to="/">
-                <button
-                  type="button"
-                  className="home-btn"
-                  onClick={onPayingOrder}
-                >
+                <button type="button" className="home-btn" onClick={clearCart}>
                   Go To Home Page
                 </button>
               </Link>

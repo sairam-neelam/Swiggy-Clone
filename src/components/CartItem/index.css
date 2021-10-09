@@ -82,7 +82,7 @@
   }
 }
 
-.cart-qty-btn {
+.decrement-quantity {
   background: none;
   border: none;
   outline: none;
@@ -90,7 +90,15 @@
   color: #3e4c59;
 }
 
-.cart-qty {
+.increment-quantity {
+  background: none;
+  border: none;
+  outline: none;
+  margin: 5px;
+  color: #3e4c59;
+}
+
+.item-quantity {
   font-family: DM Sans;
   font-style: normal;
   font-weight: 500;

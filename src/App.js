@@ -6,7 +6,7 @@ import NotFound from './components/NotFound'
 import Home from './components/Home'
 import RestaurantDetails from './components/RestaurantDetails'
 import Cart from './components/Cart'
-import Payment from './components/Payment'
+// import Payment from './components/Payment'
 import ProtectedRoute from './components/ProtectedRoute'
 import CartContext from './context/CartContext'
 
@@ -121,7 +121,6 @@ class App extends Component {
               component={RestaurantDetails}
             />
             <ProtectedRoute exact path="/cart" component={Cart} />
-            <ProtectedRoute exact path="/payment" component={Payment} />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="not-found" />
           </Switch>

@@ -45,23 +45,28 @@ class Carousel extends Component {
     }
     const {offersList} = this.state
     return (
-      <Slider {...settings} className="carousel-container">
-        {offersList.map(eachImage => (
-          <img src={eachImage.imageUrl} alt="offer" />
-        ))}
-      </Slider>
+      <ul className="carousel-container">
+        <Slider {...settings} className="carousal">
+          {offersList.map(eachImage => (
+            <li key={eachImage.id}>
+              <img
+                src={eachImage.imageUrl}
+                alt="offer"
+                className="carousal-item-image"
+              />
+            </li>
+          ))}
+        </Slider>
+      </ul>
     )
   }
 
   renderLoader = () => (
-    <div className="carousel-loader">
-      <Loader
-        testid="restaurants-offers-loader"
-        type="ThreeDots"
-        color="#F7931E"
-        height={50}
-        width={50}
-      />
+    <div
+      className="restaurants-offers-loader"
+      data-testid="restaurants-offers-loader"
+    >
+      <Loader type="ThreeDots" color="#F7931E" height={50} width={50} />
     </div>
   )
 
