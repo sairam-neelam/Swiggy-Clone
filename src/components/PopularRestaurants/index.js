@@ -29,6 +29,7 @@ class PopularRestaurants extends Component {
     isLoading: false,
     activePage: 1,
     sortOption: sortByOptions[1].value,
+    totalPages: 0,
   }
 
   componentDidMount() {
@@ -51,6 +52,8 @@ class PopularRestaurants extends Component {
     const response = await fetch(url, options)
     const data = await response.json()
     console.log(data)
+    const totalRestaurants = data.total
+    const totalPages = Math.ceil(totalRestaurants / limit)
     const updatedData = data.restaurants.map(eachItem => ({
       id: eachItem.id,
       cuisine: eachItem.cuisine,
@@ -58,7 +61,11 @@ class PopularRestaurants extends Component {
       name: eachItem.name,
       rating: eachItem.user_rating.rating,
     }))
-    this.setState({restaurantsList: updatedData, isLoading: false})
+    this.setState({
+      restaurantsList: updatedData,
+      isLoading: false,
+      totalPages,
+    })
   }
 
   updateOption = option => {
@@ -79,7 +86,7 @@ class PopularRestaurants extends Component {
 
   incrementPage = () => {
     const {activePage} = this.state
-    if (activePage <= 4) {
+    if (activePage < 4) {
       this.setState(
         prevState => ({
           activePage: prevState.activePage + 1,
@@ -90,7 +97,7 @@ class PopularRestaurants extends Component {
   }
 
   renderPopularRestaurants = () => {
-    const {restaurantsList, sortOption, activePage} = this.state
+    const {restaurantsList, sortOption, activePage, totalPages} = this.state
     return (
       <>
         <RestaurantsHeader
@@ -113,9 +120,16 @@ class PopularRestaurants extends Component {
           >
             <RiArrowDropLeftLine size={20} />
           </button>
-          <h1 testid="active-page-number" className="page-count">
-            {activePage} of 20
-          </h1>
+          <p testid="active-page-number" className="page-count">
+            {activePage}
+          </p>
+          <span
+            className="page-count"
+            style={{marginLeft: '5px', marginRight: '5px'}}
+          >
+            of
+          </span>
+          <p className="page-count"> {totalPages}</p>
           <button
             type="button"
             className="pagination-button"

@@ -89,7 +89,7 @@ const Header = props => {
               <GiHamburgerMenu size={25} className="hamburger" />
             </button>
           }
-          position="top right"
+          position="top center"
         >
           {close => (
             <div className="modal-container">

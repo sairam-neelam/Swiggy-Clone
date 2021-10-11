@@ -21,7 +21,6 @@ const RestaurantHeader = props => {
           <BsFilterLeft size={20} />
           <p className="sort-text">Sort By</p>
           <select
-            defaultValue={sortByOptions[1].value}
             value={sortOption}
             className="select-options"
             onChange={onChangeSort}

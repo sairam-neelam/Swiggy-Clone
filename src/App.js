@@ -6,7 +6,6 @@ import NotFound from './components/NotFound'
 import Home from './components/Home'
 import RestaurantDetails from './components/RestaurantDetails'
 import Cart from './components/Cart'
-// import Payment from './components/Payment'
 import ProtectedRoute from './components/ProtectedRoute'
 import CartContext from './context/CartContext'
 
